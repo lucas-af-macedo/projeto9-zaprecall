@@ -18,6 +18,8 @@ body {
   align-items: center;
   color: var(--preto);
   font-family: 'Recursive', sans-serif;
+  
+  background-color: var(--cor-fundo);
   /* font-family: 'Righteous', cursive; */
 }
 
@@ -34,6 +36,7 @@ body {
   padding: 10px 10px;
   cursor: pointer;
   font-family: 'Recursive', cursive;
+  box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
 }
 
 .flashcard.acerto {
@@ -161,7 +164,7 @@ img.icone {
   padding: 10px 0;
   font-size: 36px;
   color: white;
-  font-family: "Righteous";
+  font-family: "Righteous" ;
   z-index: 1;
   background-color: var(--cor-fundo);
 }
