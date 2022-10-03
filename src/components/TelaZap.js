@@ -1,8 +1,9 @@
-import dados from "./dados.js";
 import FlashCard from "./FlashCard";
-
+import Icones from "./Icones.js";
 export default function TelaZap(props){
-    console.log(props.dados)
+    function test(){
+        console.log((props.listaRespostas.filter((f)=>f!=='')).length)
+    }
     return(
     <>
     <div className="deck">
@@ -11,12 +12,19 @@ export default function TelaZap(props){
             ZapRecall
         </div>
         <div className="main">
-            {props.dados.map((f) => <div key={f.id}><FlashCard dadosFlashCard={f}/></div> )}
+            {props.dados.map((f) => <div key={f.id}><FlashCard 
+            dados = {props.dados}
+            dadosFlashCard={f}
+            setListaRespostas = {props.setListaRespostas}
+            listaRespostas = {props.listaRespostas} /></div> )}
         </div>
 
-    <div className="footer">
-
-</div>
+    <div onClick={test} className="footer">
+        <p>Respondidos: {props.listaRespostas.filter((f)=>f!=='').length}/{props.dados.length}</p>
+        <div>
+        {props.listaRespostas.filter((f)=>f!=='').map((f, index)=><Icones key={index}  statusResposta = {f}></Icones>)}
+        </div>
+    </div>
     </div>
     </>
 )

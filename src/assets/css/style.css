@@ -176,8 +176,8 @@ img.icone {
 }
 
 .main {
-  padding-left: calc((100vw - 300)/2);
-  padding-right:  calc((100vw - 300)/2);
+  padding-left: calc(50vw - 150px);
+  padding-right:  calc(50vw - 150px);
   height: calc(100vh - 200px);
   overflow: hidden;
   overflow-y: scroll;
@@ -207,6 +207,16 @@ img.icone {
   gap: 20px;
 }
 
+.footer div {
+ display: flex;
+ justify-content: center;
+}
+
+.footer img{
+  margin: 2px;
+  height: 23px;
+  width: 23px;
+}
 
 
 .deck .header img {
@@ -234,6 +244,7 @@ img.icone {
   font-family: "Righteous", cursive;
   font-size: 36px;
   color: white;
+  margin: 20px;
 }
 
 

@@ -3,16 +3,27 @@ import Inicio from './Inicio';
 import TelaZap from './TelaZap';
 import dados from './dados';
 export default function App(props){
+    function criarLista(){
+        let lista = []
+        dados.map(()=>lista.push(''))
+        return (lista)
+        
+    }
+    const [listaRespostas,setListaRespostas] = React.useState([])
     const [telaInicial,setTelaInicial] = React.useState(true);
-    console.log(dados)
     return(
         <>
             {telaInicial ? <Inicio 
             logo = {props.logo} 
-            setTelaInicial= {setTelaInicial}/> : 
+            setTelaInicial= {setTelaInicial}
+            setListaRespostas = {setListaRespostas}
+            criarLista = {criarLista}
+            dados = {dados} /> : 
             <TelaZap 
             logo = {props.logo}
-            dados= {dados}/>}
+            dados= {dados}
+            listaRespostas = {listaRespostas}
+            setListaRespostas = {setListaRespostas} />}
         </>
     )
 }

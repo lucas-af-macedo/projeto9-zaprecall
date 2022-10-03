@@ -1,20 +1,17 @@
+import logo from '../assets/img/logo.png'
+
 export default function Inicio(props){
     function sairTelaInicio() {
         props.setTelaInicial(false)
-        console.log('oi')
+        props.setListaRespostas(props.criarLista())
         
     }
     return(
         <div className="home">
-
-        <div className="deck">
-        <div className="header">
-            <img src={props.logo} alt='oi'/>
-            ZapRecall
-        </div>
-
+        
+        <img src={logo} alt='oi'/>
+        <h1>ZapRecall</h1>
         <button onClick={sairTelaInicio}>Iniciar Recall!</button>
-        </div>
         </div>
     )
     }
