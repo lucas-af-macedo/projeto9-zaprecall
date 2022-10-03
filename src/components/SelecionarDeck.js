@@ -3,11 +3,11 @@ import styled from 'styled-components';
 export default function SelecionarDeck(props){
     return(
     <>
-        <Selecionar defaultValue={'Selecione um deck'} onChange={e => props.valor(e)}>
+        <Selecionar defaultValue={'Selecione um deck'} onChange={e => props.valor(e)} data-identifier="deck-selector">
             <option disabled hidden>Selecione um deck</option>
-            {props.deck.map((f,index)=> <option key={index} value={f.nome}>{f.nome}</option>)}
+            {props.deck.map((f,index)=> <option key={index} value={f.nome} data-identifier="deck-option">{f.nome}</option>)}
         </Selecionar>
-        <Botao onClick={props.sairTelaInicio} disabled= {props.botaoAtivo}>Iniciar Recall!</Botao>
+        <Botao onClick={props.sairTelaInicio} disabled= {props.botaoAtivo} data-identifier="start-btn">Iniciar Recall!</Botao>
     </>
     )
 }

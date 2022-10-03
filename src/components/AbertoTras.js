@@ -50,13 +50,13 @@ export default function AbertoTras(props){
         }
     }
     return(
-        <FlashCard>
-            flashcard {props.resposta}
+        <FlashCard data-identifier="flashcard">
+            <p data-identifier="flashcard-answer">{props.resposta}</p>
             <div>
 
-            <BotaoErro onClick={error}>Não lembrei</BotaoErro>
-            <BotaoQuase onClick={almost}>quase não lembrei</BotaoQuase>
-            <BotaoZap onClick={zap}>Zap!</BotaoZap>
+            <BotaoErro onClick={error} data-identifier="forgot-btn">Não lembrei</BotaoErro>
+            <BotaoQuase onClick={almost} data-identifier="almost-forgot-btn">Quase não lembrei</BotaoQuase>
+            <BotaoZap onClick={zap} data-identifier="zap-btn">Zap!</BotaoZap>
             </div>
         </FlashCard>
     )

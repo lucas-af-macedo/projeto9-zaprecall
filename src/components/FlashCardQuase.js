@@ -2,10 +2,10 @@ import styled from 'styled-components'
 import almost from '../assets/img/icone_quase.png'
 export default function FlashCardQuase(props){
     return(
-        <FlashCard>
-        Pergunta {props.id+1}
+        <FlashCard data-identifier="flashcard">
+        <p data-identifier="flashcard-index-item">Pergunta {props.id+1}</p>
         <div>
-            <img src={almost}/>
+            <img src={almost} data-identifier="flashcard-status"/>
         </div>
         </FlashCard>
     )

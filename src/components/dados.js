@@ -45,32 +45,52 @@ const dados = [{
 ]},
 {
    id: 1,
-   nome: 'teste',
+   nome: 'Teste',
    deck: [
     {
         id: 0,
-        questao: 'pergunta',
-        resposta: 'Resposta'
+        questao: 'pergunta 1',
+        resposta: 'Resposta 1'
     },
     {
         id: 1,
-        questao: 'pergunta',
-        resposta: 'Resposta'
+        questao: 'pergunta 2',
+        resposta: 'Resposta 2'
     },
     {
         id: 2,
-        questao: 'pergunta',
-        resposta: 'Resposta'
+        questao: 'pergunta 3',
+        resposta: 'Resposta 3'
     },
     {
         id: 3,
-        questao: 'pergunta',
-        resposta: 'Resposta'
+        questao: 'pergunta 4',
+        resposta: 'Resposta 4'
     },
     {
         id: 4,
-        questao: 'pergunta',
-        resposta: 'Resposta'
+        questao: 'pergunta 5',
+        resposta: 'Resposta 5'
+    },
+    {
+        id: 5,
+        questao: 'pergunta 6',
+        resposta: 'Resposta 6'
+    },
+    {
+        id: 6,
+        questao: 'pergunta 7',
+        resposta: 'Resposta 7'
+    },
+    {
+        id: 7,
+        questao: 'pergunta 8',
+        resposta: 'Resposta 8'
+    },
+    {
+        id: 8,
+        questao: 'pergunta 9',
+        resposta: 'Resposta 9'
     }]
 }
 ]

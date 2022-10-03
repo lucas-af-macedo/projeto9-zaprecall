@@ -17,8 +17,8 @@ export default function MetaZap(props){
     }
     return(
     <>
-        <Digitar type='number' placeholder={"Escolha sua meta de zaps...(maximo:"+(props.dados.length)+')'}  onChange={e => valor(e)}/>
-        <Botao onClick={sairTelaInicio} disabled= {props.botaoAtivo}>Iniciar Recall!</Botao>
+        <Digitar type='number' placeholder={"Escolha sua meta de zaps...(max:"+(props.dados.length)+')'}  onChange={e => valor(e)} data-identifier="goals-input"/>
+        <Botao onClick={sairTelaInicio} disabled= {props.botaoAtivo} data-identifier="start-btn">Iniciar Recall!</Botao>
     </>
     )
 }

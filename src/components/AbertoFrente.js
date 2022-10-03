@@ -5,10 +5,10 @@ export default function AbertoFrente(props){
         props.setFrente(false)
     }
     return(
-        <FlashCard>
-            flashcard {props.questao}
+        <FlashCard data-identifier="flashcard">
+            <p data-identifier="flashcard-question">{props.questao}</p>
             <div>
-                <img onClick={girar} src={setinha}/>
+                <img onClick={girar} src={setinha} data-identifier="flashcard-turn-btn"/>
             </div>
         </FlashCard>
     )

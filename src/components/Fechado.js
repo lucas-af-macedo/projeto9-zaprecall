@@ -5,10 +5,10 @@ export default function Fechado(props){
         props.setFechado(false)
     }
     return(
-        <FlashCard>
-            <p>Pergunta {props.dadosFlashCard.id+1}</p>
+        <FlashCard data-identifier="flashcard">
+            <p data-identifier="flashcard-index-item">Pergunta {props.dadosFlashCard.id+1}</p>
             <div>
-                <img onClick={abrir} src={play}/>
+                <img onClick={abrir} src={play} data-identifier="flashcard-show-btn"/>
             </div>
         </FlashCard>
     )

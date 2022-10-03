@@ -24,7 +24,7 @@ export default function TelaZap(props){
         </Main>
 
     <Footer onClick={test}>
-        <p>{props.listaRespostas.filter((f)=>f!=='').length}/{props.dados.length} CONCLUÍDOS</p>
+        <p data-identifier="flashcard-counter">{props.listaRespostas.filter((f)=>f!=='').length}/{props.dados.length} CONCLUÍDOS</p>
         <div>
         {props.listaRespostas.filter((f)=>f!=='').map((f, index)=><Icones key={index}  statusResposta = {f}></Icones>)}
         </div>

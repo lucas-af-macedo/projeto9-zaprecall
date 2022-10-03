@@ -2,10 +2,10 @@ import styled from 'styled-components'
 import zap from '../assets/img/icone_certo.png'
 export default function FlashCardCerto(props){
     return(
-        <FlashCard>
-        Pergunta {props.id+1}
+        <FlashCard data-identifier="flashcard">
+        <p data-identifier="flashcard-index-item">Pergunta {props.id+1}</p>
         <div>
-            <img src={zap}/>
+            <img src={zap} data-identifier="flashcard-status"/>
         </div>
         </FlashCard>
     )

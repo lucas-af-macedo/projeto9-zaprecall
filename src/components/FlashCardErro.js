@@ -2,10 +2,10 @@ import styled from 'styled-components'
 import error from '../assets/img/icone_erro.png'
 export default function FlashCardErro(props){
     return(
-        <FlashCard>
-        Pergunta {props.id+1}
+        <FlashCard data-identifier="flashcard">
+        <p data-identifier="flashcard-index-item">Pergunta {props.id+1}</p>
         <div>
-            <img src={error}/>
+            <img src={error} data-identifier="flashcard-status"/>
         </div>
         </FlashCard>
     )
