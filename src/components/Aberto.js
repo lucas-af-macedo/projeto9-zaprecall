@@ -9,8 +9,10 @@ export default function Aberto(props){
             {frente ? <AbertoFrente questao = {props.dadosFlashCard.questao} 
             setFrente = {setFrente} /> : 
             <AbertoTras resposta = {props.dadosFlashCard.resposta}
+            janelaMeta = {props.janelaMeta}
             setRespondido = {props.setRespondido}
             setFechado={props.setFechado}
+            metaMinima = {props.metaMinima}
             id = {props.dadosFlashCard.id}
             listaRespostas = {props.listaRespostas}
             setListaRespostas = {props.setListaRespostas} />}

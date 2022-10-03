@@ -1,4 +1,7 @@
-const dados = [
+const dados = [{
+    id: 0,
+    nome: 'React',
+    deck: [
     {
         id: 0,
         questao: 'O que é JSX?',
@@ -39,6 +42,37 @@ const dados = [
         questao: 'Usamos estado (state) para __',
         resposta: 'dizer para o React quais informações quando atualizadas devem renderizar a tela novamente'
     }
+]},
+{
+   id: 1,
+   nome: 'teste',
+   deck: [
+    {
+        id: 0,
+        questao: 'pergunta',
+        resposta: 'Resposta'
+    },
+    {
+        id: 1,
+        questao: 'pergunta',
+        resposta: 'Resposta'
+    },
+    {
+        id: 2,
+        questao: 'pergunta',
+        resposta: 'Resposta'
+    },
+    {
+        id: 3,
+        questao: 'pergunta',
+        resposta: 'Resposta'
+    },
+    {
+        id: 4,
+        questao: 'pergunta',
+        resposta: 'Resposta'
+    }]
+}
 ]
     
 export default dados

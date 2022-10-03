@@ -5,6 +5,15 @@ export default function AbertoTras(props){
         props.setListaRespostas([...lista])
         props.setRespondido(true)
         props.setFechado(true)
+        console.log(props.listaRespostas.filter((f)=>f!=='').length)
+        console.log(props.listaRespostas)
+        if(props.listaRespostas.filter((f)=>f!=='').length===(props.listaRespostas.length)-1){
+            if(props.listaRespostas.filter((f)=>f==='zap').length>=props.metaMinima){
+                props.janelaMeta(1)
+            } else{
+                props.janelaMeta(0)
+            }      
+        }
     }
     function almost(){
         let lista = [...props.listaRespostas]
@@ -12,6 +21,15 @@ export default function AbertoTras(props){
         props.setListaRespostas([...lista])
         props.setRespondido(true)
         props.setFechado(true)
+        console.log(props.listaRespostas.filter((f)=>f!=='').length)
+        console.log(props.listaRespostas)
+        if(props.listaRespostas.filter((f)=>f!=='').length===(props.listaRespostas.length)-1){
+            if(props.listaRespostas.filter((f)=>f==='zap').length>=props.metaMinima){
+                props.janelaMeta(1)
+            } else{
+                props.janelaMeta(0)
+            }              
+        }
     }
     function zap(){
         let lista = [...props.listaRespostas]
@@ -19,6 +37,15 @@ export default function AbertoTras(props){
         props.setListaRespostas([...lista])
         props.setRespondido(true)
         props.setFechado(true)
+        console.log(props.listaRespostas.filter((f)=>f!=='').length)
+        console.log(props.listaRespostas)
+        if(props.listaRespostas.filter((f)=>f!=='').length===(props.listaRespostas.length)-1){
+            if(props.listaRespostas.filter((f)=>f==='zap').length>=props.metaMinima){
+                props.janelaMeta(1)
+            } else{
+                props.janelaMeta(0)
+            }        
+        }
     }
     return(
         <div className="flashcard aberto resposta">

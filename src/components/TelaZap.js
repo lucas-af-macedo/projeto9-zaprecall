@@ -4,6 +4,7 @@ export default function TelaZap(props){
     function test(){
         console.log((props.listaRespostas.filter((f)=>f!=='')).length)
     }
+    
     return(
     <>
     <div className="deck">
@@ -13,6 +14,8 @@ export default function TelaZap(props){
         </div>
         <div className="main">
             {props.dados.map((f) => <div key={f.id}><FlashCard 
+            janelaMeta = {props.janelaMeta}
+            metaMinima = {props.metaMinima}
             dados = {props.dados}
             dadosFlashCard={f}
             setListaRespostas = {props.setListaRespostas}

@@ -16,6 +16,8 @@ export default function FlashCard(props){
             dadosFlashCard={props.dadosFlashCard} 
             setFechado={setFechado}/> 
             : <Aberto 
+            janelaMeta = {props.janelaMeta}
+            metaMinima = {props.metaMinima}
             dadosFlashCard={props.dadosFlashCard} 
             setFechado={setFechado}
             setRespondido = {setRespondido}
