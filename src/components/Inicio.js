@@ -2,6 +2,7 @@ import react from 'react'
 import logo from '../assets/img/logo.png'
 import MetaZap from './MetaZap'
 import SelecionarDeck from './SelecionarDeck'
+import styled from "styled-components";
 
 
 export default function Inicio(props){
@@ -19,7 +20,7 @@ export default function Inicio(props){
     const [botaoAtivo,setBotaoAtivo] = react.useState(true)
     const [meta,setMeta] = react.useState(false)
     return(
-        <div className="home">
+        <TelaInicio>
             <img src={logo} alt='oi'/>
             <h1>ZapRecall</h1>
             {meta 
@@ -40,8 +41,29 @@ export default function Inicio(props){
                 deck = {props.deck}
                 sairTelaInicio = {sairTelaInicio}
                 botaoAtivo = {botaoAtivo} />}
-        </div>
+        </TelaInicio>
     )
     }
+const TelaInicio = styled.div`
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 1;
+  position: absolute;
+  background-color: var(--cor-fundo);
 
-    
+h1 {
+  font-family: 'Righteous',cursive;
+  font-size: 36px;
+  color: white;
+  margin: 30px;
+  font-weight: 500;
+}
+
+
+  `

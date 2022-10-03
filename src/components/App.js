@@ -2,6 +2,9 @@ import React from 'react';
 import Inicio from './Inicio';
 import TelaZap from './TelaZap';
 import deck from './dados';
+import styled from 'styled-components';
+import Vitoria from './Vitoria';
+import Derrota from './Derrota';
 export default function App(props){
     function criarLista(){
         let lista = []
@@ -13,11 +16,9 @@ export default function App(props){
         if(valor){
             setMostrarJanelaMeta(true)
             setMostrarVitoria(true)
-            alert('venceu')
         }else{
             setMostrarJanelaMeta(true)
             setMostrarVitoria(false)
-            alert('perdeu')
         }
     }
     const [dados,setDados] = React.useState([])
@@ -27,7 +28,8 @@ export default function App(props){
     const [mostrarJanelaMeta,setMostrarJanelaMeta] = React.useState(false)
     const [mostrarVitoria,setMostrarVitoria] = React.useState(false)
     return(
-        <>
+        <Tela>
+            {mostrarJanelaMeta ? mostrarVitoria ? <Vitoria/> : <Derrota/> : null}
             {telaInicial ? <Inicio 
             logo = {props.logo} 
             setMetaMinima = {setMetaMinima}
@@ -46,6 +48,18 @@ export default function App(props){
             dados= {dados}
             listaRespostas = {listaRespostas}
             setListaRespostas = {setListaRespostas} />}
-        </>
+        </Tela>
     )
 }
+const Tela = styled.div`
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--preto);
+  font-family: 'Recursive', sans-serif;
+  background-color: #FB6B6B;
+* {
+  box-sizing: border-box;}
+`
